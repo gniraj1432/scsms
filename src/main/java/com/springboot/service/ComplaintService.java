@@ -1,0 +1,12 @@
+package com.springboot.service;
+
+import com.springboot.model.Complaint;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
+import java.util.List;
+
+public interface ComplaintService {
+    Complaint registerComplaint(Complaint complaint, MultipartFile photo) throws IOException;
+    List<Complaint> getAllComplaints();
+}
