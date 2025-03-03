@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ComplaintServiceImpl implements ComplaintService {
@@ -35,7 +36,8 @@ public class ComplaintServiceImpl implements ComplaintService {
             String fileName = "photo_" + System.currentTimeMillis() + ".jpg";
             Path path = Paths.get(uploadDir + fileName);
             Files.write(path, bytes);
-            complaint.setPhotoPath(path.toString());
+//            complaint.setPhotoPath(path.toString());
+            complaint.setPhotoPath("uploads/"+fileName);
         }
 
         // Save complaint to the database
@@ -45,5 +47,24 @@ public class ComplaintServiceImpl implements ComplaintService {
     @Override
     public List<Complaint> getAllComplaints() {
         return complaintRepository.findAll();
+    }
+    
+    // Update complaint status by ID
+    @Override
+    public Complaint updateComplaintStatus(Long id, Complaint complaint) {
+        Optional<Complaint> existingComplaint = complaintRepository.findById(id);
+        if (existingComplaint.isPresent()) {
+            Complaint updatedComplaint = existingComplaint.get();
+            updatedComplaint.setStatus(complaint.getStatus());
+            return complaintRepository.save(updatedComplaint);
+        } else {
+            throw new RuntimeException("Complaint not found");
+        }
+    }
+
+    // Get a specific complaint by ID
+    @Override
+    public Complaint getComplaintById(Long id) {
+        return complaintRepository.findById(id).orElseThrow(() -> new RuntimeException("Complaint not found"));
     }
 }

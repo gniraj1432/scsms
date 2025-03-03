@@ -35,8 +35,22 @@ public class ComplaintController {
         return complaintService.registerComplaint(complaint, photo);
     }
 
+    // Get all complaints
     @GetMapping
     public List<Complaint> getAllComplaints() {
         return complaintService.getAllComplaints();
     }
+    
+    // Get a specific complaint by ID
+    @GetMapping("/{id}")
+    public Complaint getComplaint(@PathVariable Long id) {
+        return complaintService.getComplaintById(id);
+    }
+
+    // Update complaint status by ID
+    @PutMapping("/{id}")
+    public Complaint updateComplaintStatus(@PathVariable Long id, @RequestBody Complaint complaint) {
+        return complaintService.updateComplaintStatus(id, complaint);
+    }
+
 }

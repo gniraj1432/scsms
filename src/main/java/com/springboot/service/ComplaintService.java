@@ -9,4 +9,6 @@ import java.util.List;
 public interface ComplaintService {
     Complaint registerComplaint(Complaint complaint, MultipartFile photo) throws IOException;
     List<Complaint> getAllComplaints();
+	Complaint updateComplaintStatus(Long id, Complaint complaint);
+	Complaint getComplaintById(Long id);
 }
