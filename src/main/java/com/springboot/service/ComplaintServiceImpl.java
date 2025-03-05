@@ -37,7 +37,7 @@ public class ComplaintServiceImpl implements ComplaintService {
             Path path = Paths.get(uploadDir + fileName);
             Files.write(path, bytes);
 //            complaint.setPhotoPath(path.toString());
-            complaint.setPhotoPath("uploads/"+fileName);
+            complaint.setPhotoPath("uploads/" + fileName);
         }
 
         // Save complaint to the database
