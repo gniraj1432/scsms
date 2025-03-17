@@ -1,0 +1,115 @@
+/* Container Styling */
+.report-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading */
+.report-container h2 {
+  margin-bottom: 20px;
+  font-size: 28px; /* Increased */
+  color: #333;
+  font-weight: bold;
+}
+
+/* Labels */
+.report-container label {
+  display: block;
+  font-weight: 700;
+  margin: 12px 0 5px;
+  color: #444;
+  text-align: left;
+  font-size: 18px; /* Increased */
+}
+
+/* Inputs & Textarea */
+.report-container textarea,
+.report-container input {
+  width: 96%;
+  padding: 12px; /* Increased */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 18px; /* Increased */
+  transition: 0.3s;
+  outline: none;
+}
+
+.report-container textarea:focus,
+.report-container input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Buttons */
+.submit-btn,
+.location-btn,
+.camera-btn,
+.close-camera-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 14px 22px; /* Increased */
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px; /* Increased */
+  margin: 12px 6px;
+  transition: 0.3s;
+}
+
+.submit-btn:hover,
+.location-btn:hover,
+.camera-btn:hover,
+.close-camera-btn:hover {
+  background: #0056b3;
+}
+
+/* Webcam & Image Preview */
+.webcam-preview,
+.preview-image {
+  width: 100%;
+  max-width: 250px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+  border: 1px solid #ddd;
+}
+
+/* File Input Styling */
+input[type="file"] {
+  border: none;
+  background: #f8f9fa;
+  padding: 10px; /* Increased */
+  border-radius: 8px;
+  font-size: 18px; /* Increased */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .report-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .submit-btn,
+  .location-btn,
+  .camera-btn,
+  .close-camera-btn {
+    width: 100%;
+    padding: 14px;
+  }
+}
+
+.report-wrapper {
+    margin: 0px;
+    padding: 10px;
+    height: 125vh;
+    background: url("../../assets/images/Environmental_Cleanliness_Zero_Waste.svg") no-repeat center center fixed;
+    background-size: cover;
+}

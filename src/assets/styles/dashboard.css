@@ -1,0 +1,104 @@
+/* Dashboard Container */
+.dashboard-container {
+  text-align: center;
+  padding: 40px;
+  background: #f4f7fc; /* Soft background */
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Dashboard Sections */
+.dashboard-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+  width: 260px;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect */
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Colors */
+.dashboard-card:nth-child(1) { background: #ff5733; } /* Report Issue */
+.dashboard-card:nth-child(2) { background: #ffc107; } /* Track Complaints */
+.dashboard-card:nth-child(3) { background: #28a745; } /* Smart Waste Assistant */
+.dashboard-card:nth-child(4) { background: #007bff; } /* Feedback */
+.dashboard-card:nth-child(5) { background: #6c757d; } /* Settings */
+
+/* Icon Styling */
+.dashboard-card h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+/* Hover Effect for Interactive Feel */
+.dashboard-card:hover::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(30deg);
+  transition: all 0.5s;
+}
+
+
+/* Welcome Message */
+.welcome-message {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  width: 60%;
+  height: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for Welcome Message */
+.welcome-message:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Welcome Message Text */
+.welcome-message p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-card {
+    width: 90%;
+  }
+
+  .welcome-message {
+    width: 80%;
+  }
+}

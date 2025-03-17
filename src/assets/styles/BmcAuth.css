@@ -1,0 +1,79 @@
+.bmc-auth-container {
+    max-width: 380px;
+    margin: 50px auto;
+    padding: 25px;
+    
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.bmc-auth-container h2 {
+    font-size: 24px; /* Increased font size */
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+
+.bmc-auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bmc-auth-form input {
+    padding: 12px;
+    font-size: 16px; /* Increased font size */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-left: 27px;
+}
+
+.bmc-auth-form button {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    font-size: 18px; /* Bigger button text */
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bmc-auth-form button:hover {
+    background: #0056b3;
+}
+
+.toggle-link {
+    font-size: 16px; /* Increased font size */
+    color: #007bff;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.back-btn {
+    margin-top: 18px;
+    background: #333;
+    color: white;
+    padding: 10px;
+    font-size: 16px; /* Bigger button text */
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #555;
+}
+
+.bmc-auth-wrapper {
+    margin: 0px;
+    padding: 10px;
+    height: 100vh;
+    background: url("../../assets/images/Environmental_Cleanliness.gif") no-repeat center center fixed;
+    background-size: cover;
+  }

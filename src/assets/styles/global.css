@@ -1,0 +1,36 @@
+/* src/assets/styles/global.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  h1 {
+    color: #222;
+  }
+
+  body {
+    max-width: 100%;
+  }
+
+  /* Prevents footer from overlapping content */
+.content-wrapper {
+  padding-bottom: 60px; /* Same height as footer */
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+  
