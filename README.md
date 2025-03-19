@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+🚀 **Smart Cleanliness and Sanitation Management System (SCSMS)**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**SCSMS** is a sanitation management platform designed to enable users to report unclean areas by submitting images and tracking locations via IP-based geolocation. The system streamlines municipal (**BMC**) response efficiency by providing **real-time status updates, role-based authentication, and a scalable waste management solution**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🌟 **Key Features**
 
-### `npm start`
+- 📷 **Image Submission** – Capture or upload images of unclean areas.
+- 📍 **IP-Based Location Tracking** – Automatically logs report location.
+- 📊 **Real-Time Status Updates** – Monitor progress dynamically.
+- 👥 **Role-Based Access Control** – Separate portals for **Users and BMC teams**.
+- 🔒 **Secure REST APIs** – Built with **Spring Boot**.
+- 🛡️ **Spam Detection** – Prevents false and duplicate reports.
+- ⚡ **Optimized MySQL Database** – Stored procedures for fast queries.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🏗️ **Tech Stack**
 
-### `npm test`
+✅ **Frontend**: React.js (Vite), Bootstrap, jQuery\
+✅ **Backend**: Java, Spring Boot, Maven\
+✅ **Database**: MySQL (Cloud-Based)\
+✅ **Security**: Role-Based Access\
+✅ **Real-Time Updates**: WebSockets & Polling Mechanism
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📌 **Deployment Plan**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 🌐 **Frontend**: Vercel
+- ☁️ **Backend**: AWS EC2
+- 🛢️ **Database**: MySQL Cloud
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎯 **Future Enhancements**
 
-### `npm run eject`
+- 📡 **AI-Based Image Validation**
+- 📊 **Admin Dashboard for Analytics**
+- 🏙️ **City-Wide Waste Management Insights**
+- 🔔 **Push Notifications for Status Updates**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## **🚀 Get Started**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **Clone the Repository**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```sh
+# Clone the repository
+git clone https://github.com/gniraj1432/scsms.git
+cd scsms
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## **To Run the Application on localhost**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **Check Port 8082**
 
-### Code Splitting
+Make sure nothing is running on **port 8082** in the background. If something is using it, either stop the process or update the port in both the Java backend and React frontend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### **Run Java Application**
 
-### Analyzing the Bundle Size
+```sh
+# Navigate to the Java application directory
+cd scsms/src/main/java/com/springboot/application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Run the Spring Boot application
+mvn clean install
+java -jar target/*.jar
+```
 
-### Making a Progressive Web App
+**Alternatively, you can run the Java application from your IDE:**
+1. Open your project in **Eclipse/IntelliJ IDEA**.
+2. Navigate to `ScsmsApplication.java` in `src/main/java/com/springboot/application/`.
+3. Right-click on the file and select **Run As > Java Application**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### **Run React Application**
 
-### Advanced Configuration
+```sh
+# Fetch all branches
+git fetch  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Switch to the 'react' branch
+git checkout react  
 
-### Deployment
+# Pull the latest changes from the 'react' branch
+git pull origin react  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Install dependencies and start the frontend
+npm install
+npm start
+```
 
-### `npm run build` fails to minify
+### **Possible Issues & Solutions After `npm install`**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Deprecation Warnings:** These can be ignored as they don't affect app functionality.
+- **Missing Babel Plugin Warning:** If this appears, it doesn’t impact the app.
+- **Vulnerabilities:** Some vulnerabilities may be detected. The app runs fine, but it’s recommended to fix them later.
+
+---
+
+## **To Deploy on a Server**
+
+### **Backend Deployment**
+
+```sh
+mvn clean install
+java -jar target/*.jar
+```
+
+### **Frontend Deployment**
+
+```sh
+npm install
+npm start
+```
+
+---
+
+🚀 **SCSMS is now fully optimized and ready for deployment!**
+
