@@ -26,6 +26,12 @@
 
 ---
 
+## 🌍 **Live Demo**
+
+🔗 **View Frontend:** [SCSMS on Vercel](https://scsms.vercel.app/)
+
+---
+
 ## 📌 **Deployment Plan**
 
 - 🌐 **Frontend**: Vercel
