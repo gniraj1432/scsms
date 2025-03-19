@@ -28,10 +28,12 @@ h1 {
     text-align: left;
 }
 
+/* Status Buttons */
 .status-buttons {
     margin-top: 10px;
     display: flex;
     gap: 15px;
+    flex-wrap: wrap; /* Ensures responsiveness */
 }
 
 .resolved-btn {
@@ -59,4 +61,83 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* Responsive Design for Tablets (1024px & 768px) */
+@media (max-width: 1024px) {
+    .bmc-track-complaints-container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .complaints-list {
+        gap: 15px;
+    }
+
+    .status-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .status-buttons button {
+        padding: 7px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bmc-track-complaints-container {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .complaint-card {
+        padding: 12px;
+    }
+
+    .status-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .status-buttons button {
+        width: 48%;
+        text-align: center;
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+}
+
+/* Responsive Design for Mobile Screens (480px) */
+@media (max-width: 480px) {
+    .bmc-track-complaints-container {
+        max-width: 98%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .complaints-list {
+        gap: 12px;
+    }
+
+    .complaint-card {
+        padding: 10px;
+    }
+
+    .status-buttons {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .status-buttons button {
+        width: 90%;
+        font-size: 12px;
+        padding: 6px;
+    }
 }

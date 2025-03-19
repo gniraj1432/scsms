@@ -1,92 +1,171 @@
 .complaint-details-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.complaint-details-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.complaint-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.complaint-table td, 
+.complaint-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.complaint-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+}
+
+.status-update-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.status-update-btn:hover {
+  background-color: #0056b3;
+}
+
+.status-dropdown {
+  margin-top: 10px;
+}
+
+.status-select {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.status-submit-btn {
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.status-submit-btn:hover {
+  background-color: #218838;
+}
+
+.complaint-details-wrapper {
+  margin: 0px;
+  padding: 10px;
+  height: 100vh;
+  background: url("../../assets/images/Environmental_Cleanliness_Zero_Waste.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Tablet View (1024px & 768px) */
+@media (max-width: 1024px) {
+  .complaint-details-container {
+      max-width: 90%;
+      padding: 15px;
   }
-  
+
   .complaint-details-container h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+      font-size: 24px;
   }
-  
-  .complaint-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .complaint-table td, .complaint-table th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
+
+  .complaint-table td, 
   .complaint-table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #f2f2f2;
-    color: black;
+      padding: 6px;
+      font-size: 14px;
   }
-  
+
+  .back-btn, .status-update-btn, .status-submit-btn {
+      font-size: 14px;
+      padding: 8px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .complaint-details-container {
+      max-width: 95%;
+      padding: 12px;
+  }
+
+  .complaint-details-container h2 {
+      font-size: 22px;
+  }
+
+  .complaint-table td, 
+  .complaint-table th {
+      padding: 5px;
+      font-size: 13px;
+  }
+
+  .back-btn, .status-update-btn, .status-submit-btn {
+      font-size: 13px;
+      padding: 7px 12px;
+  }
+}
+
+/* Mobile View (480px) */
+@media (max-width: 480px) {
+  .complaint-details-container {
+      max-width: 98%;
+      padding: 10px;
+  }
+
+  .complaint-details-container h2 {
+      font-size: 20px;
+  }
+
+  .complaint-table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+  }
+
+  .complaint-table td, 
+  .complaint-table th {
+      padding: 4px;
+      font-size: 12px;
+  }
+
+  .back-btn, .status-update-btn, .status-submit-btn {
+      font-size: 12px;
+      padding: 6px 10px;
+  }
+
   .back-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    text-align: center;
+    max-width: 95%;
   }
-  
-  .back-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .status-update-btn {
-    margin-left: 10px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .status-update-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .status-dropdown {
-    margin-top: 10px;
-  }
-  
-  .status-select {
-    padding: 5px;
-    margin-right: 10px;
-  }
-  
-  .status-submit-btn {
-    padding: 5px 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .status-submit-btn:hover {
-    background-color: #218838;
-  }
-  
-  .complaint-details-wrapper {
-    margin: 0px;
-    padding: 10px;
-    height: 100vh;
-    background: url("../../assets/images/Environmental_Cleanliness_Zero_Waste.png") no-repeat center center fixed;
-    background-size: cover;
-  }
+}

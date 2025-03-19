@@ -23,6 +23,7 @@
   padding: 0;
 }
 
+/* Complaint Card */
 .complaint-card {
   color: #090909;
   padding: 0.7em 1.7em;
@@ -33,8 +34,10 @@
   border: 1px solid #e8e8e8;
   transition: all 0.3s;
   box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  margin-bottom: 15px;
 }
 
+/* Complaint Status */
 .complaint-card strong {
   color: black;
 }
@@ -43,6 +46,9 @@
   font-weight: bold;
   padding: 5px 10px;
   border-radius: 5px;
+  display: inline-block;
+  min-width: 90px;
+  text-align: center;
 }
 
 .pending {
@@ -74,7 +80,7 @@
 }
 
 .back-btn:hover {
-  background: #007bff;
+  background: #0056b3;
 }
 
 /* View Details Link */
@@ -93,6 +99,7 @@
   background: #0056b3;
 }
 
+/* Dashboard Complaint Link */
 .dashboard-complaint-link {
   margin-top: 20px;
   color: #090909;
@@ -106,9 +113,98 @@
   box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
 }
 
+/* Background Wrapper */
 .track-complaints-wrapper {
-  margin: 0px;
+  margin: 0;
   padding: 10px;
   background: url("../../assets/images/Environmental_Cleanliness_Zero_Waste.png") no-repeat center center fixed;
   background-size: cover;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .track-complaints-container {
+    max-width: 85%;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .track-complaints-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .complaint-card {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  .status {
+    min-width: 80px;
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+
+  .back-btn,
+  .view-details,
+  .dashboard-complaint-link {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .track-complaints-wrapper {
+    padding: 5px;
+  }
+
+  .track-complaints-container {
+    width: 95%;
+    padding: 12px;
+  }
+
+  .complaint-card {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .status {
+    min-width: 70px;
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  .back-btn,
+  .view-details,
+  .dashboard-complaint-link {
+    width: 100%;
+    padding: 0px;
+    font-size: 14px;
+  }
+
+  button {
+    margin-bottom: 10px;
+  }
+
+  a {
+    height: 20px;
+  }
+
+  .view-details {
+    max-width: 95%;
+    padding: 10px;
+    margin-right: 20px;
+    font-size: large;
+  }
+}
+
+/* Background Optimization for Mobile */
+@media screen and (max-width: 768px) {
+  .track-complaints-wrapper {
+    height: auto;
+    background-attachment: scroll;
+    /* background-size: contain; */
+  }
 }

@@ -1,77 +1,61 @@
+/* Home Page Container */
 .home-container {
   text-align: center;
-  padding: 0px;
+  padding: 0;
   background-color: white;
 }
 
+/* Carousel Image */
 .carousel-image {
-  width: 5%;
+  width: 100%;
   height: auto;
   max-height: 600px;
   object-fit: cover;
 }
 
+/* Legend Styling */
 .legend {
   background: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 10px;
   border-radius: 5px;
-  /* margin-top: 500px; */
 }
 
+/* Authentication Buttons */
 .auth-buttons {
   display: flex;
-  justify-content: space-between; /* Pushes elements to opposite sides */
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
+  margin-top: -20px;
   gap: 10px;
 }
 
 /* Left-aligned buttons */
 .left-buttons {
   display: flex;
-  gap: 0px;
+  margin-top: 0px;
+  gap: 10px;
 }
 
 /* Right-aligned buttons */
 .right-buttons {
   display: flex;
-  gap: 0px;
+  margin-top: 0px;
+  gap: 10px;
 }
 
-/* Styling for buttons */
+/* Button Styling */
 .auth-buttons button {
-  padding: 10px 20px;
+  padding: 12px 20px;
   font-size: 16px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Individual button styles */
-.track-complaints-btn,
-.report-issue-btn {
-  background-color: #28a745; /* Green */
-  color: white;
-}
-
-.login-btn {
-  background-color: #007bff; /* Blue */
-  color: white;
-}
-
-.signup-btn {
-  background-color: #ff3333; /* Red */
-  color: white;
-}
-
-.bmc-btn {
-  background-color: #6c757d; /* Gray */
-  color: white;
-}
-
-/* Individual button styles */
+/* Individual Button Styles */
 .track-complaints-btn,
 .report-issue-btn {
   background-color: #28a745; /* Green */
@@ -97,88 +81,134 @@
 .track-complaints-btn:hover,
 .report-issue-btn:hover {
   background-color: #218838; /* Darker Green */
-  transform: translateY(-3px); /* Moves button up */
-  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3); /* Green glow */
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
 }
 
 .login-btn:hover {
   background-color: #0056b3; /* Darker Blue */
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 86, 179, 0.3); /* Blue glow */
+  box-shadow: 0 5px 15px rgba(0, 86, 179, 0.3);
 }
 
 .signup-btn:hover {
   background-color: #cc0000; /* Darker Red */
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(204, 0, 0, 0.3); /* Red glow */
+  box-shadow: 0 5px 15px rgba(204, 0, 0, 0.3);
 }
 
 .bmc-btn:hover {
   background-color: #545b62; /* Darker Gray */
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(84, 91, 98, 0.3); /* Gray glow */
+  box-shadow: 0 5px 15px rgba(84, 91, 98, 0.3);
 }
 
-/* Smooth Transition */
-button {
-  transition: all 0.3s ease-in-out;
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .auth-buttons {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .auth-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .left-buttons,
+  /* Ensuring all buttons in right-buttons remain in a single row */
   .right-buttons {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -20px;
+  }
+
+  /* Left-buttons appear in the next row */
+  .left-buttons {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  /* .auth-buttons {
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: center;
+  } */
+
+  /* Ensure buttons take full width */
+  .right-buttons button,
+  .left-buttons button {
+    flex-grow: 1;
+    max-width: 200px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  /* Ensuring all buttons in right-buttons remain in a single row */
+  .right-buttons {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -30px;
+  }
+
+  /* Left-buttons appear in the next row */
+  .left-buttons {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  /* .auth-buttons {
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: center;
+  } */
+
+  /* Ensure buttons take full width */
+  .right-buttons button,
+  .left-buttons button {
+    flex-grow: 1;
+    max-width: 200px;
   }
 }
 
-
-h1{
-  font-size: 26px;
-    color: #333;
-    margin-bottom: 20px;
-    text-decoration: none;
-}
-
-p{
-  font-size: 18px;
-    color: #333;
-    margin-bottom: 20px;
-    text-decoration: none;
-}
-
-h3{
-  font-size: 22px;
-    color: #333;
-    margin-bottom: 20px;
-    text-decoration: none;
-}
-
+/* Headings and Text */
 h1 {
-  color: black;
+  font-size: 26px;
   font-weight: bold;
-  background: linear-gradient(90deg,  red, orange, yellow, green, blue, indigo, violet);
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
   background-clip: text;
   -webkit-background-clip: text;
+  color: black;
   margin: auto;
+  /* transition: color 500ms ease; */
 }
 
 h1:hover {
   color: transparent;
-  transition: 500ms ease;
+  transition: color 500ms ease;
 }
 
+h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Adjusting Full Page Heading */
 #heading {
   font-size: 2em;
   display: flex;
   height: 100vh;
   align-items: center;
+  justify-content: center;
 }

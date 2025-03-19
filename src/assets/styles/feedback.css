@@ -1,52 +1,113 @@
 .feedback-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Star Rating */
+.rating {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.star {
+  font-size: 30px;
+  cursor: pointer;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.star.selected {
+  color: gold;
+}
+
+/* Feedback Textarea */
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+/* Submit Button */
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Tablet View (1024px & 768px) */
+@media (max-width: 1024px) {
+  .feedback-container {
+      max-width: 500px;
+      padding: 18px;
   }
-  
-  .rating {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-  }
-  
+
   .star {
-    font-size: 30px;
-    cursor: pointer;
-    color: #ccc;
-    transition: 0.3s;
+      font-size: 28px;
   }
-  
-  .star.selected {
-    color: gold;
+}
+
+@media (max-width: 768px) {
+  .feedback-container {
+      max-width: 90%;
+      padding: 16px;
   }
-  
+
+  .star {
+      font-size: 26px;
+  }
+
   textarea {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    margin-top: 10px;
+      height: 90px;
   }
-  
+
   button {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 12px 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
-    transition: 0.3s;
+      padding: 10px 16px;
+      font-size: 14px;
   }
-  
-  button:hover {
-    background: #0056b3;
+}
+
+/* Mobile View (480px) */
+@media (max-width: 480px) {
+  .feedback-container {
+      max-width: 80%;
+      padding: 14px;
   }
-  
+
+  .rating {
+      flex-wrap: wrap;
+  }
+
+  .star {
+      font-size: 24px;
+  }
+
+  textarea {
+    max-width: 92.5%;
+      height: 80px;
+      font-size: 14px;
+  }
+
+  button {
+      padding: 10px 14px;
+      font-size: 14px;
+  }
+}

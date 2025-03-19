@@ -1,44 +1,109 @@
-.page_404{ 
-    padding:40px 0; 
-    background:#fff; 
+.page_404 { 
+    padding: 40px 0; 
+    background: #fff; 
     font-family: 'Arvo', serif;
+    text-align: center;
 }
 
-.page_404 img{ 
-    width:100%;
+.page_404 img { 
+    width: 100%;
+    max-width: 500px; /* Limits image size on large screens */
 }
 
-.four_zero_four_bg{
+/* 404 Background */
+.four_zero_four_bg {
     background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
     height: 400px;
     background-position: center;
- }
- 
- 
- .four_zero_four_bg h1{
-    font-size:80px;
- }
- 
- .four_zero_four_bg h3{
-	font-size:80px;
- }
-			 
- .link_404{			 
-	color: #fff!important;
+    background-size: contain; /* Ensures the image fits well */
+}
+
+/* 404 Text */
+.four_zero_four_bg h1 {
+    font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+    font-size: 80px;
+}
+
+/* 404 Button */
+.link_404 {			 
+    color: #fff!important;
     padding: 10px 20px;
     background: #39ac31;
     margin: 20px 0;
     display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
 }
- .contant_box_404 { 
-    margin-top:-50px;
-    text-align: center;
- }
 
+.link_404:hover {
+    background: #2e8b2d;
+}
+
+/* Content Box */
+.contant_box_404 { 
+    margin-top: -50px;
+    text-align: center;
+}
+
+/* Center Alignment */
 .text-center {
     text-align: center;
 }
 
 .center {
     text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .four_zero_four_bg h1,
+    .four_zero_four_bg h3 {
+        font-size: 50px; /* Reduce font size for tablets */
+    }
+
+    .four_zero_four_bg {
+        height: 300px; /* Reduce height */
+    }
+}
+
+@media (max-width: 768px) {
+    .four_zero_four_bg h1,
+    .four_zero_four_bg h3 {
+        font-size: 40px; /* Reduce font size further for mobile */
+    }
+
+    .four_zero_four_bg {
+        height: 250px; /* Adjust image height for smaller screens */
+    }
+
+    .link_404 {
+        padding: 8px 15px;
+        font-size: 14px; /* Adjust button size */
+    }
+}
+
+@media (max-width: 480px) {
+    .four_zero_four_bg h1,
+    .four_zero_four_bg h3 {
+        font-size: 30px; /* Smaller font for small mobile screens */
+    }
+
+    .four_zero_four_bg {
+        height: 200px;
+    }
+
+    .link_404 {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .contant_box_404 {
+        margin-top: -30px;
+    }
+
 }

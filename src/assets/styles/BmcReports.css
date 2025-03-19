@@ -1,30 +1,89 @@
 .bmc-reports-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.bmc-reports-container h1 {
+  font-size: 28px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.report-summary, 
+.area-summary, 
+.feedback-section {
+  background: #f9f9f9;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.report-summary p, 
+.area-summary p, 
+.feedback-section p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Tablet View (1024px & 768px) */
+@media (max-width: 1024px) {
+  .bmc-reports-container {
+      max-width: 90%;
+      padding: 15px;
   }
-  
+
   .bmc-reports-container h1 {
-    font-size: 28px;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 20px;
+      font-size: 26px;
   }
-  
-  .report-summary, .area-summary, .feedback-section {
-    background: #f9f9f9;
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 5px;
-    text-align: left;
+
+  .report-summary, 
+  .area-summary, 
+  .feedback-section {
+      padding: 12px;
+      font-size: 16px;
   }
-  
-  .report-summary p, .area-summary p, .feedback-section p {
-    font-size: 18px;
-    color: #555;
+}
+
+@media (max-width: 768px) {
+  .bmc-reports-container {
+      max-width: 95%;
+      padding: 12px;
   }
-  
+
+  .bmc-reports-container h1 {
+      font-size: 24px;
+  }
+
+  .report-summary, 
+  .area-summary, 
+  .feedback-section {
+      padding: 10px;
+      font-size: 15px;
+  }
+}
+
+/* Mobile View (480px) */
+@media (max-width: 480px) {
+  .bmc-reports-container {
+      max-width: 98%;
+      padding: 10px;
+  }
+
+  .bmc-reports-container h1 {
+      font-size: 22px;
+  }
+
+  .report-summary, 
+  .area-summary, 
+  .feedback-section {
+      padding: 8px;
+      font-size: 14px;
+  }
+}

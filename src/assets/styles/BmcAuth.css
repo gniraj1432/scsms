@@ -2,7 +2,6 @@
     max-width: 380px;
     margin: 50px auto;
     padding: 25px;
-    
     background: white;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -76,4 +75,90 @@
     height: 100vh;
     background: url("../../assets/images/Environmental_Cleanliness.gif") no-repeat center center fixed;
     background-size: cover;
-  }
+}
+
+/* Responsive Design for Tablets (1024px & 768px) */
+@media (max-width: 1024px) {
+    .bmc-auth-container {
+        max-width: 320px;
+        padding: 20px;
+    }
+
+    .bmc-auth-form input {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .bmc-auth-form button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .toggle-link {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bmc-auth-wrapper {
+        padding: 20px;
+    }
+
+    .bmc-auth-container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .bmc-auth-form input {
+        width: 100%;
+        margin: 5px;
+        padding: 10px;
+        padding-right: 0px;
+    }
+
+    .bmc-auth-form button {
+        width: 200px;
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+
+/* Responsive Design for Mobile Screens (480px) */
+@media (max-width: 480px) {
+    .bmc-auth-wrapper {
+        padding: 20px;
+    }
+
+    .bmc-auth-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .bmc-auth-form {
+        align-items: center;
+        padding: 10px;
+    }
+
+    .bmc-auth-form input {
+        width: 100%;
+        margin: 5px;
+        padding: 10px;
+        padding-right: 0px;
+    }
+
+    .bmc-auth-form button {
+        width: 200px;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .toggle-link {
+        font-size: 13px;
+    }
+
+    .back-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+}

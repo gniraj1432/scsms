@@ -12,7 +12,7 @@
 /* Heading */
 .report-container h2 {
   margin-bottom: 20px;
-  font-size: 28px; /* Increased */
+  font-size: 28px;
   color: #333;
   font-weight: bold;
 }
@@ -24,17 +24,17 @@
   margin: 12px 0 5px;
   color: #444;
   text-align: left;
-  font-size: 18px; /* Increased */
+  font-size: 18px;
 }
 
 /* Inputs & Textarea */
 .report-container textarea,
 .report-container input {
   width: 96%;
-  padding: 12px; /* Increased */
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 18px; /* Increased */
+  font-size: 18px;
   transition: 0.3s;
   outline: none;
 }
@@ -53,10 +53,10 @@
   background: #007bff;
   color: white;
   border: none;
-  padding: 14px 22px; /* Increased */
+  padding: 14px 22px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 18px; /* Increased */
+  font-size: 18px;
   margin: 12px 6px;
   transition: 0.3s;
 }
@@ -85,12 +85,19 @@
 input[type="file"] {
   border: none;
   background: #f8f9fa;
-  padding: 10px; /* Increased */
+  padding: 10px;
   border-radius: 8px;
-  font-size: 18px; /* Increased */
+  font-size: 18px;
 }
 
 /* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .report-container {
+    max-width: 80%;
+    padding: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .report-container {
     width: 90%;
@@ -104,12 +111,50 @@ input[type="file"] {
     width: 100%;
     padding: 14px;
   }
+
+  .webcam-preview,
+  .preview-image {
+    max-width: 200px;
+    height: 180px;
+  }
 }
 
+@media screen and (max-width: 480px) {
+  .report-container {
+    width: 95%;
+    padding: 18px;
+  }
+
+  .submit-btn,
+  .location-btn,
+  .camera-btn,
+  .close-camera-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .webcam-preview,
+  .preview-image {
+    max-width: 180px;
+    height: 150px;
+  }
+}
+
+/* Background Wrapper */
 .report-wrapper {
-    margin: 0px;
-    padding: 10px;
-    height: 125vh;
-    background: url("../../assets/images/Environmental_Cleanliness_Zero_Waste.png") no-repeat center center fixed;
-    background-size: cover;
+  margin: 0;
+  padding: 5px;
+  height: 125vh;
+  background: url("../../assets/images/Environmental_Cleanliness_Zero_Waste.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Mobile Optimization for Background */
+@media screen and (max-width: 768px) {
+  .report-wrapper {
+    height: auto;
+    background-attachment: scroll;
+    /* background-size: contain; */
+  }
 }
