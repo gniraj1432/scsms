@@ -35,3 +35,42 @@
     }
   }
   
+  /* Hover Effects */
+
+/* Before-After Image Comparison */
+/* .before-after__cursor-wrapper {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  .before-after__cursor-wrapper:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  } */
+
+  /* Before-After Image Comparison Section */
+.before-after-container {
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.before-after-container:hover {
+    background-color: #e3f2fd; /* Light Blue Background */
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Heading */
+.before-after-heading {
+    transition: color 0.3s ease-in-out;
+}
+.before-after-container:hover .before-after-heading {
+    color: #1565c0; /* Darker Blue */
+}
+
+/* Ensure Image Comparison Component Stays Within Container */
+.before-after-container img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.before-after-container img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(21, 101, 192, 0.3); /* Subtle Glow */
+}
+
+  

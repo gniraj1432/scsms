@@ -495,4 +495,59 @@ p {
   }
 }
 
+/* Hover Effects for All Sections */
+
+/* Call to Action */
+.call-to-action {
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.call-to-action:hover {
+  background-color: #ffcdd2; /* Lighter Red (Soft Background) */
+  transform: scale(1.02);
+}
+.cta-button {
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.cta-button:hover {
+  background-color: #b71c1c; /* Darker Red */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(183, 28, 28, 0.3);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  transition: background-color 0.3s ease-in-out;
+}
+.testimonials-section:hover {
+  background-color: #dcedc8; /* Lighter Green */
+}
+.testimonial {
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  border-left: 5px solid #4caf50; /* Default Green Border */
+  padding-left: 15px;
+}
+.testimonial:hover {
+  transform: scale(1.02);
+  background-color: rgba(46, 125, 50, 0.1); /* Soft Green Background */
+  border-left: 5px solid #1b5e20; /* Darker Green Border */
+}
+
+/* FAQ Section */
+.faq-section {
+  transition: background-color 0.3s ease-in-out;
+}
+.faq-section:hover {
+  background-color: #d1c4e9; /* Lighter Purple */
+}
+.faq {
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.faq:hover {
+  transform: translateY(-3px);
+  background-color: rgba(103, 58, 183, 0.1); /* Soft Purple Background */
+  border-left: 5px solid #4527a0; /* Purple Border */
+}
+
+
+
 
