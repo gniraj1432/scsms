@@ -219,7 +219,7 @@ p {
   width: 100%;
   max-width: 900px;  /* Adjust as needed */
   height: 500px;
-  margin: 40px auto;  /* Centered */
+  margin: 20px auto;  /* Centered */
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
@@ -293,7 +293,7 @@ p {
   padding: 40px 20px;
   background: #ffebee;
   border-radius: 8px;
-  margin: 40px auto;
+  margin: 20px auto;
   max-width: 900px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -334,7 +334,7 @@ p {
   padding: 50px 20px;
   background: #f1f8e9;
   border-radius: 8px;
-  margin: 40px auto;
+  margin: 20px auto;
   max-width: 900px;
 }
 
@@ -369,7 +369,7 @@ p {
   padding: 50px 20px;
   background: #ede7f6;
   border-radius: 8px;
-  margin: 40px auto;
+  margin: 20px auto;
   max-width: 900px;
 }
 
