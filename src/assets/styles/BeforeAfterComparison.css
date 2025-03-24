@@ -70,7 +70,7 @@
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .before-after-container img:hover {
-    transform: scale(1.03);
+    /* transform: scale(1.03); */
     box-shadow: 0 4px 10px rgba(21, 101, 192, 0.3); /* Subtle Glow */
 }
 
