@@ -27,7 +27,17 @@
   /* Responsive Design */
   @media (max-width: 768px) {
     .before-after-container {
-      max-width: 90%;
+      max-width: 85%;
+      padding: 10px;
+    }
+    .before-after-heading {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .before-after-container {
+      max-width: 85%;
       padding: 10px;
     }
     .before-after-heading {
@@ -36,15 +46,6 @@
   }
   
   /* Hover Effects */
-
-/* Before-After Image Comparison */
-/* .before-after__cursor-wrapper {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  .before-after__cursor-wrapper:hover {
-    transform: scale(1.02);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  } */
 
   /* Before-After Image Comparison Section */
 .before-after-container {

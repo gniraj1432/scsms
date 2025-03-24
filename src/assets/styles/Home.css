@@ -213,80 +213,6 @@ p {
   justify-content: center;
 }
 
-/* Before-After Cursor Wrapper */
-.before-after__cursor-wrapper {
-  position: relative;  /* Positioned within the parent container */
-  width: 100%;
-  max-width: 900px;  /* Adjust as needed */
-  height: 500px;
-  margin: 20px auto;  /* Centered */
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Before & After Image Containers */
-.before-after__container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-/* Before & After Images */
-.before-after__image {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 50%; /* Initial width of before image */
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: width 0.3s ease-in-out;
-}
-
-/* Before Image */
-.before {
-  left: 0;
-  background-size: cover;
-}
-
-/* After Image */
-.after {
-  right: 0;
-  background-size: cover;
-  width: 100%; /* Full width to be hidden under before image */
-}
-
-/* Cursor Dragger */
-.before-after__cursor {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 28px;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  cursor: ew-resize;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translateX(-50%);
-  transition: background-color 0.2s ease-in-out;
-}
-
-/* Hover Effect */
-.before-after__cursor:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .before-after__cursor-wrapper {
-    height: 350px;
-    max-width: 95%;
-  }
-}
-
 /* Call to Action */
 .call-to-action {
   text-align: center;
@@ -351,8 +277,20 @@ p {
   font-size: 18px;
   color: #555;
   border-left: 5px solid #4caf50;
-  padding-left: 15px;
   font-style: italic;
+}
+
+/* Ensure Text Stays Inside */
+.testimonial p {
+  font-size: 18px;
+  color: #555;
+  margin-top: 5px;
+  margin-right: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.testimonial:hover p {
+  color: #1b5e20; /* Darker Green */
 }
 
 .testimonial span {
@@ -407,7 +345,7 @@ p {
 
   .call-to-action {
     padding: 30px 15px;
-    max-width: 90%;
+    max-width: 85%;
     margin: 20px auto;
   }
 
@@ -426,7 +364,7 @@ p {
 
   .testimonials-section {
     padding: 40px 15px;
-    max-width: 90%;
+    max-width: 85%;
   }
 
   .testimonial {
@@ -436,7 +374,7 @@ p {
 
   .faq-section {
     padding: 40px 15px;
-    max-width: 90%;
+    max-width: 85%;
   }
 
   .faq h3 {
@@ -452,7 +390,7 @@ p {
 @media (max-width: 480px) {
   .call-to-action {
     padding: 25px 10px;
-    max-width: 90%;
+    max-width: 85%;
     text-align: center;
   }
 
@@ -471,19 +409,18 @@ p {
 
   .testimonials-section {
     padding: 30px 10px;
-    max-width: 90%;
+    max-width: 85%;
   }
 
   .testimonial {
     width: 100%;
     font-size: 14px;
-    padding-left: 10px;
     border-left-width: 3px;
   }
 
   .faq-section {
     padding: 30px 10px;
-    max-width: 90%;
+    max-width: 85%;
   }
 
   .faq h3 {
@@ -524,7 +461,6 @@ p {
 .testimonial {
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   border-left: 5px solid #4caf50; /* Default Green Border */
-  padding-left: 15px;
 }
 .testimonial:hover {
   transform: scale(1.02);
