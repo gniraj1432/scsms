@@ -59,6 +59,44 @@ git clone https://github.com/gniraj1432/scsms.git
 cd scsms
 ```
 
+### **Clone the repository for the java branch**
+
+```sh
+# Clone only the 'java' branch
+git clone -b java --single-branch https://github.com/gniraj1432/scsms.git
+cd scsms
+```
+**Clones only the specified `java` branch** and does not fetch other branches. This is useful when you don’t need the entire repository history.
+
+### **You can also use this to clone the repository for the java branch**
+
+```sh
+# Clone only the 'java' branch
+git clone -b java https://github.com/gniraj1432/scsms.git
+cd scsms
+```
+**Clones the entire repository, including all branches**, but checks out the `java` branch by default.
+
+### **Which One to Use?**  
+- If you only need the **`java` branch**, use `--single-branch` to save space and time.  
+- If you want access to **all branches**, but start working on `java`, omit `--single-branch`.  
+
+### Clone the Repository  
+
+To clone only the `java` branch (recommended for optimized cloning):  
+
+```sh
+git clone -b java --single-branch https://github.com/gniraj1432/scsms.git
+```
+
+If you want to clone the entire repository but check out the `java` branch:  
+
+```sh
+git clone -b java https://github.com/gniraj1432/scsms.git
+```
+
+**Note:** The first command (`--single-branch`) is preferred if you only need to work on the `java` branch, as it saves bandwidth and disk space.
+
 ---
 
 ## **To Run the Application on localhost**
