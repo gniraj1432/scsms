@@ -1,14 +1,12 @@
 /* Before-After Image Comparison Section */
 .before-after-container {
     text-align: center;
-    margin-top: 30px;
+    margin: 20px auto;
     padding: 20px;
     background-color: #f8f9fa; /* Light grey background */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 60%;
-    margin-left: auto;
-    margin-right: auto;
   }
   
   /* Section Heading */
