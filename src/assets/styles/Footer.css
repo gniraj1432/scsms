@@ -43,18 +43,20 @@
 }
 
 .footer-links h3 {
-  font-size: 18px;
+  font-size: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .footer-contact h3 {
-  font-size: 18px;
+  font-size: 20px;
   margin-top: -40px;
   margin-bottom: 10px;
 }
 
+.footer-links p,
 .footer-contact p {
+  font-size: 16px;
   margin-top: 0px;
   margin-bottom: 10px;
 }
@@ -71,6 +73,7 @@
 }
 
 .footer-links a {
+  font-size: 16px;
   color: #222;
   text-decoration: none;
   transition: 0.3s;
@@ -120,6 +123,11 @@
 
   .footer-links h3,
   .footer-contact h3 {
+    font-size: 18px;
+  }
+
+  .footer-links p,
+  .footer-contact p {
     font-size: 16px;
   }
 }
@@ -135,7 +143,12 @@
 
   .footer-links h3,
   .footer-contact h3 {
-    font-size: 14px;
+    font-size: 18px;
+  }
+
+  .footer-links p,
+  .footer-contact p {
+    font-size: 16px;
   }
 
   .footer-contact {
@@ -147,7 +160,7 @@
   }
 
   .footer-links a {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .footer-bottom {
