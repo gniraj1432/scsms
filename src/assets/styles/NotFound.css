@@ -12,8 +12,11 @@
 
 /* 404 Background */
 .four_zero_four_bg {
-    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
-    height: 400px;
+    /* background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif); */
+    background-image: url("../../assets/images/404.gif");
+    height: 500px;
+    width: 50%;
+    justify-self: center;
     background-position: center;
     background-size: contain; /* Ensures the image fits well */
 }
@@ -67,7 +70,9 @@
     }
 
     .four_zero_four_bg {
-        height: 300px; /* Reduce height */
+        height: 300px; 
+        width: 50%;
+        justify-self: center;
     }
 }
 

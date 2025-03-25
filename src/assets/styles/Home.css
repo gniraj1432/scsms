@@ -5,6 +5,42 @@
   background-color: white;
 }
 
+/* Marquee Container */
+.marquee-container {
+  background-color: #007bff;
+  color: #ffffff; 
+  padding: 12px 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  /* border-radius: 5px; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Marquee Text */
+.marquee-text {
+  display: inline-block;
+  padding-right: 30px; /* Space between repetitions */
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 768px) {
+  .marquee-container {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-container {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+}
+
+
 /* Carousel Image */
 .carousel-image {
   width: 100%;
@@ -483,6 +519,7 @@ p {
   background-color: rgba(103, 58, 183, 0.1); /* Soft Purple Background */
   border-left: 5px solid #4527a0; /* Purple Border */
 }
+
 
 
 

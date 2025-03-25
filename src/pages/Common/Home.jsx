@@ -4,12 +4,16 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../../assets/styles/Home.css";
 import BeforeAfterComparison from "../../components/beforeAfterComparison";
+import Marquee from "react-fast-marquee";
 
-import clean1 from "../../assets/images/clean1.jpg";
-import clean2 from "../../assets/images/clean2.jpg";
-import clean3 from "../../assets/images/clean3.jpg";
-import EC from "../../assets/images/Environmental_Cleanliness.svg";
-import ZW from "../../assets/images/Environmental_Cleanliness_Zero_Waste.svg";
+import clean1 from "../../assets/images/clean1.png";
+import clean2 from "../../assets/images/clean2.png";
+import clean3 from "../../assets/images/clean3.png";
+import clean4 from "../../assets/images/clean4.png";
+import clean5 from "../../assets/images/clean5.png";
+import clean6 from "../../assets/images/clean6.png";
+import EC from "../../assets/images/Environmental_Cleanliness.gif";
+import ZW from "../../assets/images/Environmental_Cleanliness_Zero_Waste.png";
 
 // import { Link } from "react-router-dom";
 // import TrackComplaints from "../Auth/TrackComplaints";
@@ -17,9 +21,12 @@ import ZW from "../../assets/images/Environmental_Cleanliness_Zero_Waste.svg";
 // import Footer from "../../components/Footer";
 
 const images = [
-  { src: clean1, alt: "Clean Street" },
-  { src: clean2, alt: "Sanitation Workers" },
-  { src: clean3, alt: "Public Hygiene" },
+  { src: clean1, alt: "Dirty Street" },
+  { src: clean2, alt: "Workers Cleaning" },
+  { src: clean3, alt: "Public Awareness" },
+  { src: clean4, alt: "Clean Street" },
+  { src: clean5, alt: "Community Cleanup" },
+  { src: clean6, alt: "Green Space" },
   { src: EC, alt: "Environment Cleanliness" },
   { src: ZW, alt: "Zero Waste" },
 ];
@@ -29,6 +36,14 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      <div className="marquee-container">
+        <Marquee gradient={false} speed={50}>
+          <span className="marquee-text">
+            Report cleanliness issues & make an impact! Your city needs you!
+          </span>
+        </Marquee>
+      </div>
+
       {/* Buttons Section */}
       <div className="auth-buttons">
         {/* Left Side Buttons */}
@@ -66,6 +81,7 @@ const Home = () => {
         transitionTime={1000} // Smooth transition effect (1s)
         emulateTouch // Enable swipe gestures
         dynamicHeight // Adjusts height based on image size
+        useKeyboardArrows // Allows navigation with arrow keys
         // stopOnHover // Pause autoplay when hovering over carousel
       >
         {images.map((image, index) => (
