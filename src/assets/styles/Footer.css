@@ -1,34 +1,157 @@
-/* Footer Container */
 .footer {
-    width: 100%;
-    background: #e0e0e0;
-    color: #fff; /* White text */
-    text-align: center;
-    margin: -10px 0px;
-    padding: 0;
-    position: fixed; /* Sticks to bottom */
-    bottom: 0;
-    left: 0;
-    font-size: 14px;/* Footer Container */
-    z-index: 1000; /* Ensures it's above other elements */
+  background-color: #007bff;
+  color: white;
+  padding: 0px auto;
+  text-align: center;
 }
 
-/* Add extra padding at the bottom of content to prevent overlap */
-.content-wrapper {
-    padding-bottom: 50px; /* Adjust based on footer height */
-  }
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.footer-logo {
+  width: 100%;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  margin: 10px auto;
+}
+
+/* Horizontal Line */
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  border: none;
+  margin-top: 20px;
+}
+
+.footer-links,
+.footer-contact {
+  width: 50%;
+}
+
+.footer-links h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-contact h3 {
+  font-size: 18px;
+  margin-top: -40px;
+  margin-bottom: 10px;
+}
+
+.footer-contact p {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.footer-links li {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  color: #222;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 0px;
+  font-size: 14px;
+  border-top: 2px solid #444;
+  background-color: #2A2A2A;
+  padding-top: 0px;
+  box-shadow: 10 0 0 10px #2A2A2A;
+}
+
+.footer-bottom p {
+  color: white;
+  padding: 0px 0px;
+  margin: 5px auto;
+}
+
+.footer-logo p {
+  margin-bottom: 0px;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .footer {
-    font-size: 12px;
-    padding: 10px 0;
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .footer-links,
+  .footer-contact {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .footer-logo h2 {
+    font-size: 22px;
+  }
+
+  .footer-links h3,
+  .footer-contact h3 {
+    font-size: 16px;
   }
 }
 
-  p {
-    color: black;
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 10px;
   }
 
-  
-  
+  .footer-logo h2 {
+    font-size: 20px;
+  }
+
+  .footer-links h3,
+  .footer-contact h3 {
+    font-size: 14px;
+  }
+
+  .footer-contact {
+    margin-top: 40px;
+  }
+
+  .footer-links ul {
+    padding-left: 0;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+}

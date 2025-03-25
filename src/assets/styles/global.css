@@ -22,7 +22,7 @@ body {
 
   /* Prevents footer from overlapping content */
 .content-wrapper {
-  padding-bottom: 60px; /* Same height as footer */
+  padding-bottom: 0px;
 }
 
 /* Prevent horizontal scroll */
