@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../assets/styles/BmcManageComplaints.css"; 
+import BASE_URL from "../../config"; // Import API URL
 
 const BmcManageComplaints = () => {  
   const [complaints, setComplaints] = useState([]);
@@ -8,7 +9,7 @@ const BmcManageComplaints = () => {
   useEffect(() => {
     const fetchComplaints = async () => {
       try {
-        const response = await fetch("http://localhost:8082/api/complaints");
+        const response = await fetch(`${BASE_URL}/api/complaints`);
         const data = await response.json();
         setComplaints(data);
       } catch (error) {
@@ -23,7 +24,7 @@ const BmcManageComplaints = () => {
   // Update complaint status and save back to localStorage
   const updateStatus = async (id, newStatus) => {
     try {
-      const response = await fetch(`http://localhost:8082/api/complaints/${id}`, {
+      const response = await fetch(`${BASE_URL}/api/complaints/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: newStatus }),
@@ -57,7 +58,7 @@ const BmcManageComplaints = () => {
               <p>Latitude: {complaint.latitude}</p>
               <p>Longitude: {complaint.longitude}</p>
               <p>Status: <strong>{complaint.status}</strong></p>
-              {complaint.photoPath && <img src={`http://localhost:8082/${complaint.photoPath}`} alt="Complaint-Photo" />}              
+              {complaint.photoPath && <img src={`${BASE_URL}/${complaint.photoPath}`} alt="Complaint-Photo" />}              
 
               {/* <p>Status: <strong>{complaint.status}</strong></p> */}
 

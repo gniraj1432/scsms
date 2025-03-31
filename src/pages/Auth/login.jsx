@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom"; // Use Navigate for redirects
 import "../../assets/styles/login.css";
+import BASE_URL from "../../config"; // Import API URL
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
@@ -14,7 +15,7 @@ const LoginPage = () => {
     const loginData = { username, password };
 
     try {
-      const response = await fetch("http://localhost:8082/api/auth/login", {
+      const response = await fetch(`${BASE_URL}/api/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include", // Enables session tracking

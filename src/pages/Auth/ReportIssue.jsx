@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import Webcam from "react-webcam";
 import "../../assets/styles/ReportIssue.css";
+import BASE_URL from "../../config"; // Import API URL
 
 const ReportIssue = () => {
   const [description, setDescription] = useState("");
@@ -59,7 +60,7 @@ const ReportIssue = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8082/api/complaints", {
+      const response = await fetch(`${BASE_URL}/api/complaints`, {
         method: "POST",
         body: formData,
       });

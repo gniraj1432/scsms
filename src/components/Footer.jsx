@@ -26,13 +26,20 @@ const Footer = () => {
         <div className="footer-contact">
           <h3>Contact Us</h3>
           <p>Email: support@scsms.com</p>
-          <p>Phone: +91 98765 43210</p>
+          <p>Phone: +91 88983 06282</p>
+        </div>
+
+        <hr className="footer-divider" /> {/* Horizontal Line */}
+
+        <div class="developer-info">
+          <p>Developed by <strong>Niraj Gupta</strong> - <a href="mailto:nirajguptaa1098@gmail.com">nirajguptaa1098@gmail.com</a></p>
         </div>
       </div>
 
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} SCSMS. All Rights Reserved.</p>
       </div>
+
     </footer>
   );
 };

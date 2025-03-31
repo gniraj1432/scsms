@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"; // For API calls
 import "../../assets/styles/settings.css";
+import BASE_URL from "../../config"; // Import API URL
 
 const Settings = () => {
   const [user, setUser] = useState({
@@ -18,7 +19,7 @@ const Settings = () => {
     const fetchUserSettings = async () => {
       try {
         // const response = await axios.get("http://localhost:5000/api/user/settings");
-        const response = await axios.get("http://localhost:5000/api/user/settings");
+        const response = await axios.get(`${BASE_URL}/api/user/settings`);
         setUser(response.data); // Populate state with fetched data
       } catch (error) {
         console.error("Error fetching user settings:", error);
@@ -57,7 +58,7 @@ const Settings = () => {
       }
 
       // await axios.put("http://localhost:5000/api/user/settings", formData);
-      await axios.put("http://localhost:8082/api/user/settings", formData);
+      await axios.put(`${BASE_URL}/api/user/settings`, formData);
       alert("Settings updated successfully!");
     } catch (error) {
       console.error("Error updating settings:", error);

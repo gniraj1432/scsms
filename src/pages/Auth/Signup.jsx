@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../assets/styles/signup.css"; 
+import BASE_URL from "../../config"; // Import API URL
 
 const SignupPage = () => {
   const [fullName, setFullName] = useState("");
@@ -25,7 +26,7 @@ const SignupPage = () => {
     };
   
     try {
-      const response = await fetch("http://localhost:8082/api/auth/signup", {
+      const response = await fetch(`${BASE_URL}/api/auth/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

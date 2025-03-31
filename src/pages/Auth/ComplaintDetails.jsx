@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "../../assets/styles/complaintDetails.css";
+import BASE_URL from "../../config"; // Import API URL
 
 const ComplaintDetails = () => {
   const { id } = useParams();
@@ -12,7 +13,7 @@ const ComplaintDetails = () => {
   useEffect(() => {
     const fetchComplaint = async () => {
       try {
-        const response = await fetch(`http://localhost:8082/api/complaints/${id}`);
+        const response = await fetch(`${BASE_URL}/api/complaints/${id}`);
         if (!response.ok) {
           throw new Error("Complaint not found");
         }
@@ -43,7 +44,7 @@ const ComplaintDetails = () => {
   // Function to handle status update
   const handleStatusUpdate = async () => {
     try {
-      const response = await fetch(`http://localhost:8082/api/complaints/${complaint.id}`, {
+      const response = await fetch(`${BASE_URL}/api/complaints/${complaint.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -122,7 +123,7 @@ const ComplaintDetails = () => {
               <td><strong>Image</strong></td>
               <td>{complaint.photoPath && (
                 <img 
-                  src={`http://localhost:8082/${complaint.photoPath}`} 
+                  src={`${BASE_URL}/${complaint.photoPath}`} 
                   alt="Complaint-Photo" 
                   style={{ width: "100px", height: "100px", objectFit: "cover" }} 
                 />

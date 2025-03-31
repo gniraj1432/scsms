@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../assets/styles/BmcReports.css";
+import BASE_URL from "../../config"; // Import API URL
 
 const BmcReports = () => {
   const [report, setReport] = useState(null);
@@ -7,7 +8,7 @@ const BmcReports = () => {
   useEffect(() => {
     const fetchReport = async () => {
       try {
-        const response = await fetch("http://localhost:8082/api/reports");
+        const response = await fetch(`${BASE_URL}/api/reports`);
         const data = await response.json();
         setReport(data);
       } catch (error) {

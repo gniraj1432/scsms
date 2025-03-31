@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../assets/styles/feedback.css";
+import BASE_URL from "../../config"; // Import API URL
 
 const Feedback = () => {
   const [rating, setRating] = useState(0);
@@ -11,7 +12,7 @@ const Feedback = () => {
     const feedbackData = { rating, feedback };
   
     try {
-      const response = await fetch("http://localhost:8082/api/feedback", {
+      const response = await fetch(`${BASE_URL}/api/feedback`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

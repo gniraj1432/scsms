@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../assets/styles/BmcManageServices.css"; // Import CSS
+import BASE_URL from "../../config"; // Import API URL
 
 const BmcManageServices = () => {
   const [services, setServices] = useState([]);
@@ -8,7 +9,7 @@ const BmcManageServices = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await fetch("http://localhost:8082/api/services");
+        const response = await fetch(`${BASE_URL}/api/services`);
         const data = await response.json();
         setServices(data);
       } catch (error) {
@@ -23,7 +24,7 @@ const BmcManageServices = () => {
   // Function to update service status
   const updateStatus = async (id, newStatus) => {
     try {
-      const response = await fetch(`http://localhost:8082/api/services/${id}`, {
+      const response = await fetch(`${BASE_URL}/api/services/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: newStatus }),

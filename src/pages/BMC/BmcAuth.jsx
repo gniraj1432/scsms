@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../assets/styles/BmcAuth.css";
+import BASE_URL from "../../config"; // Import API URL
 
 const BmcAuth = () => {
   const navigate = useNavigate();
@@ -18,8 +19,8 @@ const BmcAuth = () => {
     };
 
     const url = isSignup
-      ? "http://localhost:8082/api/bmc/signup"
-       : "http://localhost:8082/api/bmc/login";
+      ? `${BASE_URL}/api/bmc/signup`
+       : `${BASE_URL}/api/bmc/login`;
       //: "http://localhost:3000/track-complaints";
 
     try {

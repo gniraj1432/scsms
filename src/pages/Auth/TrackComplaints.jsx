@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "../../assets/styles/trackComplaints.css";
+import BASE_URL from "../../config"; // Import API URL
 
 const TrackComplaints = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const TrackComplaints = () => {
   useEffect(() => {
     const fetchComplaints = async () => {
       try {
-        const response = await fetch("http://localhost:8082/api/complaints");
+        const response = await fetch(`${BASE_URL}/api/complaints`);
         const data = await response.json();
         console.log("Fetched complaints data:", data); // Debug log
         setComplaints(data);
