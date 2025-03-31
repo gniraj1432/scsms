@@ -1,9 +1,12 @@
 import React, { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom"; // Import Navigate for redirecting
 import Webcam from "react-webcam";
 import "../../assets/styles/ReportIssue.css";
 import BASE_URL from "../../config"; // Import API URL
 
 const ReportIssue = () => {
+  const navigate = useNavigate();
+
   const [description, setDescription] = useState("");
   const [area, setArea] = useState("");
   const [file, setFile] = useState(null);
@@ -46,6 +49,19 @@ const ReportIssue = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    // Check if user is logged in by sending a request to backend
+    try {
+      const loginResponse = await fetch(`${BASE_URL}/api/check-login`, {
+        method: "GET",
+        credentials: "include", // Make sure to send the session cookie or any credentials
+      });
+
+      if (!loginResponse.ok) {
+        alert("You need to be logged in to submit a report.");
+        navigate("/login"); // Redirect to login page
+        return;
+      }
+
     const formData = new FormData();
     formData.append("description", description);
     formData.append("area", area);
@@ -59,7 +75,8 @@ const ReportIssue = () => {
       formData.append("photo", blob);
     }
 
-    try {
+    // try {
+      // Submit the report
       const response = await fetch(`${BASE_URL}/api/complaints`, {
         method: "POST",
         body: formData,
