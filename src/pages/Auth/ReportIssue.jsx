@@ -51,7 +51,7 @@ const ReportIssue = () => {
 
     // Check if user is logged in by sending a request to backend
     try {
-      const loginResponse = await fetch(`${BASE_URL}/api/check-login`, {
+      const loginResponse = await fetch(`${BASE_URL}/api/auth/login`, {
         method: "GET",
         credentials: "include", // Make sure to send the session cookie or any credentials
       });
