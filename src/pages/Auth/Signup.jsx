@@ -37,7 +37,7 @@ const SignupPage = () => {
   
       if (response.ok) {
         alert("Signup Successful!");
-        window.location.href = "/login";
+        window.location.href = "/login"; //Redirect to Login Page
       } else {
         alert(data.message || "Signup failed!");
       }
