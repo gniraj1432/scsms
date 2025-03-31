@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../../assets/styles/dashboard.css";
 
 const UserDashboard = () => {
+  const navigate = useNavigate();
+  
   return (
     
     <div className="dashboard-container">
@@ -35,18 +38,20 @@ const UserDashboard = () => {
         </Link>
 
         <div className="dashboard-container">
-      {/* <h1></h1> */}
-      <div className="welcome-message">
-        <p>
-          <strong>"A Clean City is a Healthy City! 🌿✨"</strong>
-        </p>
-        <p>
-          Let’s work together to keep our surroundings clean and green. Dispose of waste
-          responsibly, report cleanliness issues, and contribute to a healthier environment. 
-          Every small effort makes a big difference!
-        </p>
-      </div>
-    </div>
+          {/* <h1></h1> */}
+          <div className="welcome-message">
+            <p>
+              <strong>"A Clean City is a Healthy City! 🌿✨"</strong>
+            </p>
+            <p>
+              Let’s work together to keep our surroundings clean and green. Dispose of waste
+              responsibly, report cleanliness issues, and contribute to a healthier environment. 
+              Every small effort makes a big difference!
+            </p>
+          </div>
+
+          <button onClick={() => navigate("/")} className="logout-btn">Logout</button>
+        </div>
       </div>
     </div>
   );
