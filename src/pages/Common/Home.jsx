@@ -34,6 +34,29 @@ const images = [
 const Home = () => {
   const navigate = useNavigate();
 
+  const isUserLoggedIn = () => {
+    const user = localStorage.getItem("user");
+    return user !== null;
+  };
+
+  const handleTrackComplaints = () => {
+    if (isUserLoggedIn()) {
+      navigate("/track-complaints");
+    } else {
+      alert("Please login to see track complaints.");
+      navigate("/login");
+    }
+  };
+
+  const handleReportIssue = () => {
+    if (isUserLoggedIn()) {
+      navigate("/report-issue");
+    } else {
+      alert("Please login to report an issue.");
+      navigate("/login");
+    }
+  };
+
   return (
     <div className="home-container">
       <div className="marquee-container">
@@ -48,10 +71,10 @@ const Home = () => {
       <div className="auth-buttons">
         {/* Left Side Buttons */}
         <div className="left-buttons">
-          <button className="track-complaints-btn" onClick={() => navigate("/track-complaints")}>
+          <button className="track-complaints-btn" onClick={handleTrackComplaints}>
             Track Complaints
           </button>
-          <button className="report-issue-btn" onClick={() => navigate("/report-issue")}>
+          <button className="report-issue-btn" onClick={handleReportIssue}>
             Report an Issue
           </button>
         </div>

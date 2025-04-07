@@ -21,12 +21,17 @@ const LoginPage = () => {
         credentials: "include", // Enables session tracking
         body: JSON.stringify(loginData),
       });
+      
+      const data = await response.json(); //Call this once only
 
       if (response.ok) {
+        // Store user in localStorage
+        localStorage.setItem("user", JSON.stringify(data));
         alert("Login Successful!");
         navigate("/user-dashboard"); // Redirect after login
+        navigate(0);
       } else {
-        const data = await response.json();
+        // const data = await response.json();
         alert(data.message || "Login failed!");
       }
     } catch (error) {

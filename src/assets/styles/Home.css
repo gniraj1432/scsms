@@ -215,17 +215,32 @@
 h1 {
   font-size: 26px;
   font-weight: bold;
-  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red);
   background-clip: text;
   -webkit-background-clip: text;
   color: black;
   margin: auto;
+  background-size: 300% auto; /* makes it wide enough to animate */
+  transition: background-position 0.5s ease;
   /* transition: color 500ms ease; */
 }
 
 h1:hover {
   color: transparent;
   transition: color 500ms ease;
+}
+
+h1:hover {
+  animation: rainbowMove 5s linear infinite;
+}
+
+@keyframes rainbowMove {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
 }
 
 h3 {

@@ -10,10 +10,17 @@ const ComplaintDetails = () => {
   const [showDropdown, setShowDropdown] = useState(false); // State to toggle the dropdown visibility
   const [selectedStatus, setSelectedStatus] = useState(""); // State to hold the selected status
 
+  // Get session user from sessionStorage
+  const sessionUser = JSON.parse(localStorage.getItem("bmc_user"));
+  const isBmc = !!sessionUser; // true if logged in and Only BMC can update
+
   useEffect(() => {
     const fetchComplaint = async () => {
       try {
-        const response = await fetch(`${BASE_URL}/api/complaints/${id}`);
+        const response = await fetch(`${BASE_URL}/api/complaints/${id}`, {
+          method: "GET",
+          credentials: "include", // Added for session-based authentication
+        });
         if (!response.ok) {
           throw new Error("Complaint not found");
         }
@@ -46,6 +53,7 @@ const ComplaintDetails = () => {
     try {
       const response = await fetch(`${BASE_URL}/api/complaints/${complaint.id}`, {
         method: "PUT",
+        credentials: "include", 
         headers: {
           "Content-Type": "application/json",
         },
@@ -84,32 +92,36 @@ const ComplaintDetails = () => {
               <td><strong>Status</strong></td>
               <td>
                 {complaint.status}
-                {/* Button to toggle dropdown */}
-                <button onClick={toggleDropdown} className="status-update-btn">
-                  Update Status
-                </button>
 
-                {/* Dropdown menu to select the status */}
-                {showDropdown && (
-                  <div className="status-dropdown">
-                    <select 
-                      value={selectedStatus} 
-                      onChange={handleStatusChange} 
-                      className="status-select"
-                    >
-                      <option value="Pending">Pending</option>
-                      <option value="In Progress">In Progress</option>
-                      <option value="Resolved">Resolved</option>
-                    </select>
-                    <button 
-                      onClick={handleStatusUpdate} 
-                      className="status-submit-btn"
-                    >
-                      Submit
+                {/* Show Update button only if BMC is logged in */}
+                {isBmc && (
+                  <>
+                    <button onClick={toggleDropdown} className="status-update-btn">
+                      Update Status
                     </button>
-                  </div>
+
+                    {showDropdown && (
+                      <div className="status-dropdown">
+                        <select
+                          value={selectedStatus}
+                          onChange={handleStatusChange}
+                          className="status-select"
+                        >
+                          <option value="Pending">Pending</option>
+                          <option value="In Progress">In Progress</option>
+                          <option value="Resolved">Resolved</option>
+                        </select>
+                        <button
+                          onClick={handleStatusUpdate}
+                          className="status-submit-btn"
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    )}
+                  </>
                 )}
-                </td>
+              </td>
             </tr>
             <tr>
               <td><strong>Description</strong></td>
@@ -121,13 +133,30 @@ const ComplaintDetails = () => {
             </tr>
             <tr>
               <td><strong>Image</strong></td>
-              <td>{complaint.photoPath && (
+              {/* <td>{complaint.photoPath && (
                 <img 
                   src={`${BASE_URL}/${complaint.photoPath}`} 
                   alt="Complaint-Photo" 
                   style={{ width: "100px", height: "100px", objectFit: "cover" }} 
                 />
-              )}</td>
+              )}</td> */}
+              <td>
+                {complaint.photoPath ? (
+                  <img 
+                    src={`${BASE_URL}/${complaint.photoPath}`} 
+                    alt="Complaint Photos" 
+                    style={{ width: "100px", height: "100px", objectFit: "cover" }} 
+                  />
+                ) : complaint.photoUrl ? (
+                  <img 
+                    src={complaint.photoUrl} 
+                    alt="Complaint Photos" 
+                    style={{ width: "100px", height: "100px", objectFit: "cover" }} 
+                  />
+                ) : (
+                  "No Photo Available"
+                )}
+              </td>
             </tr>
           </tbody>
         </table>

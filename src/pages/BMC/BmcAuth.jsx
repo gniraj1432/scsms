@@ -34,8 +34,10 @@ const BmcAuth = () => {
 
       if (response.ok) {
         console.log("Success:", data);
-        localStorage.setItem("token", data.token); // Store token (if JWT is used)
+        // localStorage.setItem("token", data.token); // Store token (if JWT is used)
+        localStorage.setItem("bmc_user", JSON.stringify(data)); // Store bmc_user session
         navigate("/bmc-dashboard"); // Redirect after successful login
+        navigate(0);
       } else {
         alert("Error: " + data.message);
       }

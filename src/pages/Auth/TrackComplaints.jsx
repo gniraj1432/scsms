@@ -12,17 +12,75 @@ const TrackComplaints = () => {
   useEffect(() => {
     const fetchComplaints = async () => {
       try {
-        const response = await fetch(`${BASE_URL}/api/complaints`);
+        const response = await fetch(`${BASE_URL}/api/complaints`, {
+          method: "GET",
+          credentials: "include", // send session cookie
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
+  
+        if (!response.ok) {
+          throw new Error("Unauthorized or session expired");
+        }
+  
         const data = await response.json();
-        console.log("Fetched complaints data:", data); // Debug log
+        console.log("Fetched complaints data:", data);
         setComplaints(data);
       } catch (error) {
         console.error("Error fetching complaints:", error);
       }
     };
-
-    fetchComplaints();
-  }, []);
+  
+    const checkSession = async () => {
+      try {
+    //     const res = await fetch(`${BASE_URL}/api/auth/session-user`, {
+    //       credentials: 'include',
+    //     });
+  
+    //     if (res.ok) {
+    //       const user = await res.json();
+    //       console.log("Session user found:", user);
+    //       fetchComplaints(); // call only when user is logged in
+    //     } else {
+    //       console.log("No session, redirecting to login.");
+    //       navigate("/login");
+    //     }
+    //   } catch (err) {
+    //     console.error("Session check failed:", err);
+    //     navigate("/login");
+    //   }
+    // };
+        const resUser = await fetch(`${BASE_URL}/api/auth/session-user`, {
+          method: "GET",
+          credentials: 'include',
+        });
+        
+        const resBmc = await fetch(`${BASE_URL}/api/bmc/session-bmc`, {
+          method: "GET",
+          credentials: 'include',
+        });
+        
+        if (resUser.ok) {
+          const user = await resUser.json();
+          console.log("Session user found:", user);
+          fetchComplaints();
+        } else if (resBmc.ok) {
+          const bmcUser = await resBmc.json();
+          console.log("Session BMC user found:", bmcUser);
+          fetchComplaints();
+        } else {
+          console.log("No session, redirecting to login.");
+          navigate("/login");
+        }        
+      } catch (err) {
+        console.error("Session check failed:", err);
+        navigate("/login");
+      }
+    };
+  
+    checkSession();
+  }, [navigate]);
 
   return (
     <div className="track-complaints-wrapper">

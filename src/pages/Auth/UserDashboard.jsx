@@ -5,6 +5,12 @@ import "../../assets/styles/dashboard.css";
 
 const UserDashboard = () => {
   const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate("/");
+  };
+  
   
   return (
     
@@ -23,7 +29,7 @@ const UserDashboard = () => {
         </Link>
 
         <Link to="/nearby-updates" className="dashboard-card">
-          <h2>🤖Smart Waste Collection Assistant</h2>
+          <h2>🤖 Smart Waste Collection Assistant</h2>
           <p>Smart Assistant for User  </p>
         </Link>
 
@@ -50,7 +56,7 @@ const UserDashboard = () => {
             </p>
           </div>
 
-          <button onClick={() => navigate("/")} className="logout-btn">Logout</button>
+          <button onClick={handleLogout} className="logout-btn">Logout</button>
         </div>
       </div>
     </div>

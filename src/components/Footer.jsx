@@ -31,7 +31,7 @@ const Footer = () => {
 
         <hr className="footer-divider" /> {/* Horizontal Line */}
 
-        <div class="developer-info">
+        <div className="developer-info">
           <p>Developed by <strong>Niraj Gupta</strong> - <a href="mailto:nirajguptaa1098@gmail.com">nirajguptaa1098@gmail.com</a></p>
         </div>
       </div>
