@@ -51,6 +51,13 @@
 
 ## **🚀 Get Started**
 
+## 🛠️ Setup Instructions
+
+1. Clone the repo
+2. Run `npm install`
+3. Set up `.env` files
+4. Run with `npm run dev`
+
 ### **Clone the Repository**
 
 ```sh
