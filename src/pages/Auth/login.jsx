@@ -20,6 +20,7 @@ const LoginPage = () => {
         headers: { "Content-Type": "application/json" },
         credentials: "include", // Enables session tracking
         body: JSON.stringify(loginData),
+        mode: "cors",  // Ensures CORS mode is enabled
       });
       
       const data = await response.json(); //Call this once only
