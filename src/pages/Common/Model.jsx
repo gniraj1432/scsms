@@ -24,8 +24,8 @@ const InfoModal = () => {
         </p>
         <p>
           You're welcome to explore, fork, or clone the project:<br />
-          <a href="https://github.com/gniraj1432/scsms" target="_blank">Frontend Repo</a> | 
-          <a href="https://github.com/gniraj1432/scsms-backend" target="_blank"> Backend Repo</a>
+          <a href="https://github.com/gniraj1432/scsms" target="_blank" rel="noreferrer">Frontend Repo</a> | 
+          <a href="https://github.com/gniraj1432/scsms-backend" target="_blank" rel="noreferrer"> Backend Repo</a>
         </p>
         <p>Check README for setup instructions.<br />Feedback is always welcome</p>
         <p><strong>I hope you enjoy exploring and using this project — Happy Coding!</strong></p>
