@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../../assets/styles/Home.css";
 import BeforeAfterComparison from "../../components/beforeAfterComparison";
 import Marquee from "react-fast-marquee";
+import InfoModal from "../Common/Modal"; // Modal Component
 
 import clean1 from "../../assets/images/clean1.png";
 import clean2 from "../../assets/images/clean2.png";
@@ -59,6 +60,10 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      {/* Show Modal */}
+      <InfoModal />
+
+      {/* Marquee */}
       <div className="marquee-container">
         <Marquee gradient={false} speed={50}>
           <span className="marquee-text">
