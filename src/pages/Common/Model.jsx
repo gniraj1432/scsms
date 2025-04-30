@@ -27,7 +27,7 @@ const InfoModal = () => {
           <a href="https://github.com/gniraj1432/scsms" target="_blank" rel="noreferrer">Frontend Repo</a> | 
           <a href="https://github.com/gniraj1432/scsms-backend" target="_blank" rel="noreferrer"> Backend Repo</a>
         </p>
-        <p>Check README for setup instructions.<br />Feedback is always welcome</p>
+        <p>Check README for setup instructions.<br />Feedback is always welcome 😊</p>
         <p><strong>I hope you enjoy exploring and using this project — Happy Coding!</strong></p>
         <button className="bottom-close-btn" onClick={() => setShow(false)}>Close</button>
       </div>
